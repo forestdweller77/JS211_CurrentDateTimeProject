@@ -5,21 +5,46 @@
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
 
 const displayDate = () => {
   const currentDate = new Date()
 
+
   document.getElementById("display-element").innerHTML = currentDate;
 }
- 
+
+console.log(new Date)
+
+
 
 // Write a JavaScript program to convert a number to a string.
 
+const numToString = (n) => {
 
+  console.log(`This is a : ${n}`)
+
+    const num  = n.toString();
+
+    console.log(`this is a : ${typeof(num)}`)
+
+
+ 
+}
 
 // Write a JavaScript program to convert a string to the number.
 
+const stringToNumber = (s) => {
+  console.log(`line 26 stringToNumber: ${typeof(s)}`)
+
+  const num = parseInt(s);
+  
+  
+  
+  console.log(`line 41 stringToNumber: ${typeof(num)}`)
+
+  document.getElementById('display-number').innerHTML = num;
+  
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -30,10 +55,50 @@ const displayDate = () => {
   // * NaN
   // * String
   
+  //Work in Progress
+
+  // / document.getElementById('findDataType').addEventListener('click', function (){
+
+    //   let dataInput = parseInt(document.getElementById('d1').value);
+    
+    //   if (dataInput === "boolean ")
+    
+    //     return "is boolean"; 
+    
+    //     alert(dataInput)
+    
+    
+    // })
 
   
 // Write a JavaScript program that adds 2 numbers together.
 
+function calculate() {
+  
+  var firstNumber = parseFloat(document.getElementById('n1').value);
+  var secondNumber = parseFloat(document.getElementById('n2').value);
+   var oper = document.getElementById('operators').value
+   
+   if(oper === 'add') 
+      {
+        document.getElementById('result').value = firstNumber + secondNumber; 
+      }
+   if (oper === 'subtract')
+     {
+       document.getElementById('result').value = firstNumber - secondNumber; 
+     }
+   if (oper === 'multiply')
+     {
+       document.getElementById('result').value = firstNumber * secondNumber; 
+     }
+   
+   if (oper === 'divide')
+     {
+       document.getElementById('result').value = firstNumber / secondNumber; 
+     }
+   
+   
+ }
 
 
 // Write a JavaScript program that runs only when 2 things are true.
